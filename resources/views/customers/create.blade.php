@@ -12,10 +12,16 @@
                     <div class="form-group">
                         <label>Tên khách hàng</label>
                         <input type="text" class="form-control" name="name"  placeholder="Enter name" required>
+                        @error('name')
+                        {{$message}}
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label>Email</label>
                         <input type="email" class="form-control" name="email" placeholder="Enter email" required>
+                        @error('email')
+                        {{$message}}
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label>Ngày sinh</label>
