@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CustomerRequest;
 use App\Models\City;
 use App\Models\Customer;
 use Illuminate\Http\Request;
@@ -29,7 +30,7 @@ class CustomerController extends Controller
      *
      * @return Response
      */
-    public function store(Request $request){
+    public function store(CustomerRequest $request){
         $customer = new Customer();
         $customer->name     = $request->input('name');
         $customer->email    = $request->input('email');
